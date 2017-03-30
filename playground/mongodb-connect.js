@@ -14,7 +14,7 @@ MongoClient.connect ( 'mongodb://172.17.0.2:27017/TodoApp',(err,db)=>{
     if(err){
     return  console.log('Unable to connect to mongo DB server');
     }
-    console.log('Connected to mongo DB server');
+    console.log('Connected to mongo DB server' );
 
 
 

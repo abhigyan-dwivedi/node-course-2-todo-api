@@ -24,22 +24,22 @@ MongoClient.connect ( 'mongodb://172.17.0.2:27017/TodoApp',(err,db)=>{
       // });
       //
 
-      var cursor=db.collection('Users').find({location:{$regex:'.*elhi.*'}});
+      // var cursor=db.collection('Users').find({location:{$regex:'.*elhi.*'}});
+      //
+      // cursor.count().then((count)=>{x
+      //   console.log(`User's count ${count}`);
+      // },(err)=>{
+      //   console.log('Unable to fetch Users:',err);
+      // });
 
-      cursor.count().then((count)=>{x
-        console.log(`User's count ${count}`);
-      },(err)=>{
-        console.log('Unable to fetch Users:',err);
-      });
+      //db.collection.aggregate('Users').find({});
 
-
-
-    // db.collection('Users').find().toArray().then((res)=>{
-    //   console.log('Users:');
-    //   console.log(JSON.stringify(res,undefined,2));
-    // }).catch((e)=>{
-    //   console.log('Unable to pass todos:',e);
-    // });//returns mongo cursor which is pointer to those docs
+    db.collection('Users').find().toArray().then((res)=>{
+      console.log('Users:');
+      console.log(JSON.stringify(res,undefined,2));
+    }).catch((e)=>{
+      console.log('Unable to pass todos:',e);
+    });//returns mongo cursor which is pointer to those docs
     //db.close()
 
 });
